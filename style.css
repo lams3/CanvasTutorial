@@ -1,0 +1,36 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,700');
+
+body {
+  background-color: white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #444;
+  text-align: justify;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Merriweather", serif;
+  text-align: center;
+}
+
+p, ul {
+  margin: 20px 10%;
+}
+
+.fiddleContainer {
+  margin: 10px 10%;
+}
