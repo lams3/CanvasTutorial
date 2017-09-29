@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Canvas API</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>
+      HTML Canvas API
+    </h1>
+    
+    <p>
+      O &lt<b>canvas</b>&gt é um elemento HTML que nos permite trabalhar com gráficos usando Javascript. Iremos abordar as funções básicas de sua API, bem como mostrar alguns exemplos interativos.
+    </p>
+    
+    <h3>
+      Considerações Iniciais
+    </h3>
+    
+    <p>
+      O primeiro passo para a utilização do canvas é a criação de uma página HTML contendo um canvas, assim como sua seleção por meio do código Javascript e a criação de um contexto de desenho para o mesmo. O canvas pode ser selecionado como qualquer outro objeto do DOM.
+    </p>
+    
+    <div class="fiddleContainer">
+      <iframe width="100%" height="200" src="//jsfiddle.net/xx10Lwe1/7/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+    </div>
+    
+    <p>
+      Cada elemento &lt<b>canvas</b>&gt tem atributos <b>widht</b> e <b>height</b> que definem seu tamanho em pixels. Esses atributos são diferentes dos atributos CSS de mesmo nome. Ao modificar o CSS o canvas tem sua imagem e sistema de coordenadas distorcido para se ajustar aos valores especificados, mas seus atributos <b>width</b> e <b> height</b> não mudam. Podemos modificar esses atributos de forma correta usando a tag HTML, ou via Javascript.
+    </p>
+    
+    <div class="fiddleContainer">
+      <iframe width="100%" height="300" src="//jsfiddle.net/pkxLa479/2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+    </div>
+    
+    <p>
+      O canvas tem sua origem inicialmente fixada em seu canto superior esquerdo, com o eixo <b>x</b> crescendo à direita, e o <b>y</b> abaixo, onde suas coordenadas são dadas de <b>(0, 0)</b> a <b>(width, height)</b>.
+    </p>
+    
+    <h3>
+      Paths e Formas Básicas
+    </h3>
+    
+    <p>
+      Podemos imaginar o desenho no canvas como o desenho de uma caneta no papel. Cada caneta tem propriedades como cor e espessura do traço. Podemos imaginar um Path como um desenho feito por uma única caneta. Cada path tem propriedades como cor de preenchimento, cor do traço, espessura do traço, dentre outras.
+      Sempre que quisermos 'mudar de caneta' é recomendado que criemos um novo Path.
+    </p>
+    
+    <p>
+      Algumas funções de Paths do canvas são:
+    </p>
+    
+    <ul>
+      <li>
+        <b>beginPath()</b>
+      </li>
+      <li>
+        <b>moveTo(x, y)</b>
+      </li>
+      <li>
+        <b>lineTo(x, y)</b>
+      </li>
+      <li>
+        <b>arcTo(x1, y1, x2, y2, raio)</b>
+      </li>
+      <li>
+        <b>arc(xc, yc, raio, inicio, fim [, sentido])</b>
+      </li>
+      <li>
+        <b>rect(x, y, largura, altura)</b>
+      </li>
+      <li>
+        <b>clearRect(x, y, largura, altura)</b>
+      </li>
+      <li>
+        <b>stroke()</b>
+      </li>
+      <li>
+        <b>fill()</b>
+      </li>
+    </ul>
+    
+    <p>
+      E algumas propriedades:
+    </p>
+    
+    <ul>
+      <li>
+        <b>strokeStyle</b>
+      </li>
+      <li>
+        <b>fillStyle</b>
+      </li>
+      <li>
+        <b>lineWidth</b>
+      </li>
+    </ul>
+    
+    <p>Experimente!</p>
+    
+    <div class="fiddleContainer">
+      <iframe width="100%" height="500" src="//jsfiddle.net/vxgctpLn/5/embedded/result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+    </div>
+    
+    <h3>
+      Interagindo com o Usuário
+    </h3>
+    
+    <p>
+      É possivel criar formas de interação no canvas usando eventos Javascript. Se quisermos por exemplo criar um circulo que pode ser arrastado pelo canvas, podemos dividir esse evento em três partes básicas. Apertar botão, arrastar mouse e soltar botão.
+    </p>
+    
+    <div class="fiddleContainer">
+      <iframe width="100%" height="300" src="//jsfiddle.net/93Lzu7v3/2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+    </div>
+    
+    <h3>
+      Criando Animações
+    </h3>
+    
+    <p>
+      Podemos também criar animações no canvas usando Javascript. Uma das maneiras é com a função <b>setInterval(função, intervalo)</b>. Suponhamos que agora queremos que o circulo ocile de um lado a outro da tela.
+    </p>
+    
+    <div class="fiddleContainer">
+      <iframe width="100%" height="300" src="//jsfiddle.net/qs6ef1zd/1/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+    </div>
+    
+    <h3>
+      Referências
+    </h3>
+    
+    <ul>
+      <li>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API#JavaScript">MDN</a> (Inglês)
+      </li>
+      <li>
+        <a href="https://www.w3schools.com/html/html5_canvas.asp">W3Schools</a> (Inglês)
+      </li>
+      <li>
+        <a href="https://msdn.microsoft.com/pt-br/library/dn151487.aspx">MSDN</a> (Português)
+      </li>
+    </ul>
+    
+  </body>
+</html>
